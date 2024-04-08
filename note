@@ -1,0 +1,45 @@
+/*         try {
+            const user = await User.create({
+                username: payload.username,
+                email: payload.email,
+                password: payload.password
+            }); return user;
+        } catch (error) {
+            return error;
+        } */
+
+
+            // return payload;
+
+            // h.send(payload);
+            // payload.save();
+/* const server = require('./server');
+const User = require("./User");
+
+server.route({
+    method: 'POST',
+    path: '/user',
+    handler: (request, h) => {
+        const payload = request.payload;
+        return payload;
+    }
+}); */
+
+
+/* const userSchema = new mongoose.Schema({
+    username: "username",
+    email: "email",
+    password: "password"
+}); */
+
+// PUT
+/* exports.update = {
+    handler: async (request, h) => {
+        try {
+            const payload = request.payload;
+            const updated_user = await crud.update_User(payload);
+        } catch (error) {
+            return error;
+        }
+    }
+}; */
