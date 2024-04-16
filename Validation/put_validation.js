@@ -3,7 +3,8 @@ const Joi = require("joi");
 module.exports = {
     payload: Joi.object({
     
-    username: Joi.string().min(3).max(20).required(),
-    email: Joi.string(). email(). lowercase().required(),
-    password: Joi.string().min(6).required()
+    id: Joi.string().required(),
+    username: Joi.string().min(3).max(20).optional(),
+    email: Joi.string(). email(). lowercase().optional(),
+    password: Joi.string().min(6).optional()
 })}
