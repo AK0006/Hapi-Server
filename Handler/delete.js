@@ -9,6 +9,6 @@ exports.delete_user = (request, h) => {
         const deleteuser = User.findOneAndDelete({_id: id});
         return deleteuser;
     } catch (error) {
-        return error;
+        return error;   
     }
 };

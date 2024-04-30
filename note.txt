@@ -56,3 +56,42 @@ server.route({
             password: User.password
         }
     };
+
+
+    server.register(require("@hapi/basic"));
+    server.auth.strategy('login', 'basic', {validate});
+
+
+    const validate = async (request, username, password, h) => {
+    const payload = request.payload;
+    const user = await User.findOne({username, password}, payload);
+
+    if(!user){
+        return {isValid: false};
+    }return {isValid: true,
+        credentials: {name: user.name}
+    }
+}
+
+
+
+
+
+
+        const salt = await Bcrypt.genSalt();
+        const password = User.password;
+        const hashedPassword = await Bcrypt.hash(password, salt);
+        console.log(salt);
+        console.log(hashedPassword);
+
+
+        user.method.setPassword = (password) => {
+    user.salt
+}
+
+module.exports = mongoose.model('user', user);
+
+
+
+        // const hashPassword = Post.create_User.hashPassword;
+        // console.log(hashPassword);

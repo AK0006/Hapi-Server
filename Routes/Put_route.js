@@ -7,6 +7,8 @@ module.exports = {
     path: '/user/{id}',
     options: {
         validate: put,
+        tags: ['api']
+        // auth: 'jwt'
     },
     handler: Puthandler.update_user
 }

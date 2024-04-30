@@ -6,7 +6,11 @@ module.exports = ({
     method: 'POST',
     path: '/user',
     options: {
-        validate: create
+        validate: create,
+        tags: ['api'],
+        auth: false
     },
     handler: Post.create_User
-});
+});    validate: {
+        
+}
